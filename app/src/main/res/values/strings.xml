@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BoxerTime</string>
+    <string name="apply">Применить</string>
+    <string name="back">Назад</string>
+    <string name="timer">Таймер</string>
+    <string name="Rest">Перерыв</string>
+</resources>

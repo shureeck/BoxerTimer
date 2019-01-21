@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/layoutBattons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/apply"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_height="50dp" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="395dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="10dp"
+            android:background="#AAAAAA"
+            android:visibility="visible"
+            app:layout_constraintBottom_toTopOf="@+id/backBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/layoutBattons"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/timerTxtView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text="@string/timer"
+                android:textSize="40sp"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/layoutTimer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:scrollbars="horizontal|vertical"
+                android:visibility="visible">
+
+                <EditText
+                    android:id="@+id/hourTxtEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="none"
+                    android:singleLine="false"
+                    android:text="00"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text=":"
+                    android:textSize="40sp" />
+
+                <EditText
+                    android:id="@+id/minTxtEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="none"
+                    android:singleLine="false"
+                    android:text="05"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text=":"
+                    android:textSize="40sp" />
+
+                <EditText
+                    android:id="@+id/secTxtEdit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="datetime"
+                    android:singleLine="false"
+                    android:text="00"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/RestSwtch"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:layout_weight="1"
+                android:checked="true"
+                android:layoutDirection="rtl"
+                android:switchTextAppearance="@style/TextAppearance.AppCompat"
+                android:text="Перерыв"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="23sp" />
+
+            <LinearLayout
+                android:id="@+id/layoutRest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <EditText
+                    android:id="@+id/hourRestTxtEdit"
+                    android:layout_width="43dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0"
+                    android:ems="10"
+                    android:inputType="datetime"
+                    android:singleLine="false"
+                    android:text="00"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text=":"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/minRestTxtEdit"
+                    android:layout_width="43dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0"
+                    android:ems="10"
+                    android:inputType="datetime"
+                    android:singleLine="false"
+                    android:text="30"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text=":"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/secRestTxtEdit"
+                    android:layout_width="43dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0"
+                    android:ems="10"
+                    android:inputType="datetime"
+                    android:singleLine="false"
+                    android:text="00"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+            <Switch
+                android:id="@+id/StartSwtch"
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:layout_weight="1"
+                android:checked="true"
+                android:layoutDirection="rtl"
+                android:switchTextAppearance="@style/TextAppearance.AppCompat"
+                android:text="Начнать отсчет через"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="23sp" />
+
+            <LinearLayout
+                android:id="@+id/layoutStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <EditText
+                    android:id="@+id/hourStartTxtEdit"
+                    android:layout_width="43dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0"
+                    android:ems="10"
+                    android:inputType="datetime"
+                    android:singleLine="false"
+                    android:text="00"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text=":"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/minSatrtTxtEdit"
+                    android:layout_width="43dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0"
+                    android:ems="10"
+                    android:inputType="datetime"
+                    android:singleLine="false"
+                    android:text="30"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text=":"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/secStartTxtEdit"
+                    android:layout_width="43dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0"
+                    android:ems="10"
+                    android:inputType="datetime"
+                    android:singleLine="false"
+                    android:text="00"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/LeftSwtch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:layoutDirection="rtl"
+                android:switchPadding="10sp"
+                android:switchTextAppearance="@style/TextAppearance.AppCompat"
+                android:text="Осталось до конца"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="23sp" />
+
+            <LinearLayout
+                android:id="@+id/layoutLeft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <EditText
+                    android:id="@+id/hourLeftTxtEdit"
+                    android:layout_width="43dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0"
+                    android:ems="10"
+                    android:inputType="datetime"
+                    android:singleLine="false"
+                    android:text="00"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text=":"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/minLeftTxtEdit"
+                    android:layout_width="43dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0"
+                    android:ems="10"
+                    android:inputType="datetime"
+                    android:singleLine="false"
+                    android:text="10"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text=":"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/secLeftTxtEdit"
+                    android:layout_width="43dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0"
+                    android:ems="10"
+                    android:inputType="datetime"
+                    android:singleLine="false"
+                    android:text="00"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/SignalSwtch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:layoutDirection="rtl"
+                android:switchPadding="10sp"
+                android:switchTextAppearance="@style/TextAppearance.AppCompat"
+                android:text="Сигнал каждые"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="22sp" />
+
+            <LinearLayout
+                android:id="@+id/layoutSignal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <EditText
+                    android:id="@+id/hourSignalTxtEdit"
+                    android:layout_width="43dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0"
+                    android:ems="10"
+                    android:inputType="datetime"
+                    android:singleLine="false"
+                    android:text="00"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text=":"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/minSignalTxtEdit"
+                    android:layout_width="43dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0"
+                    android:ems="10"
+                    android:inputType="datetime"
+                    android:singleLine="false"
+                    android:text="01"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text=":"
+                    android:textSize="30sp" />
+
+                <EditText
+                    android:id="@+id/secSignalTxtEdit"
+                    android:layout_width="43dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="0"
+                    android:ems="10"
+                    android:inputType="datetime"
+                    android:singleLine="false"
+                    android:text="00"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/roundSwtch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="false"
+                android:layoutDirection="rtl"
+                android:switchPadding="10sp"
+                android:switchTextAppearance="@style/TextAppearance.AppCompat"
+                android:text="Раундов"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="23sp" />
+
+            <LinearLayout
+                android:id="@+id/layoutRound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <EditText
+                    android:id="@+id/roundTxtEdit"
+                    android:layout_width="43dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="127dp"
+                    android:layout_weight="0"
+                    android:ems="10"
+                    android:gravity="center"
+                    android:inputType="numberSigned"
+                    android:text="1"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <!--<android.support.constraint.ConstraintLayout-->
+        <!--android:id="@+id/layout"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_marginBottom="10dp"-->
+        <!--android:scrollbars="vertical"-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/layoutBattons"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent">-->
+
+       <!---->
+    <!--</android.support.constraint.ConstraintLayout>-->
+
+</android.support.constraint.ConstraintLayout>
