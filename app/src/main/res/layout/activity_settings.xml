@@ -104,11 +104,14 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:gravity="center"
-                    android:inputType="none"
+                    android:inputType="numberDecimal"
+                    android:maxLength="2"
+                    android:digits="0123456789"
                     android:singleLine="false"
                     android:text="00"
                     android:textSize="40sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:selectAllOnFocus="true"/>
 
                 <TextView
                     android:id="@+id/txtView"
@@ -127,11 +130,14 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:gravity="center"
-                    android:inputType="none"
+                    android:inputType="numberDecimal"
+                    android:maxLength="2"
+                    android:digits="0123456789"
                     android:singleLine="false"
                     android:text="05"
                     android:textSize="40sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:selectAllOnFocus="true"/>
 
                 <TextView
                     android:id="@+id/txtView1"
@@ -150,11 +156,14 @@
                     android:layout_weight="1"
                     android:ems="10"
                     android:gravity="center"
-                    android:inputType="datetime"
+                    android:inputType="numberDecimal"
+                    android:maxLength="2"
+                    android:digits="0123456789"
                     android:singleLine="false"
                     android:text="00"
                     android:textSize="40sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:selectAllOnFocus="true"/>
 
 
             </LinearLayout>
@@ -188,11 +197,14 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="0"
                     android:ems="10"
-                    android:inputType="datetime"
+                    android:inputType="numberDecimal"
+                    android:maxLength="2"
+                    android:digits="0123456789"
                     android:singleLine="false"
                     android:text="00"
                     android:textSize="30sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:selectAllOnFocus="true"/>
 
                 <TextView
                     android:id="@+id/txtView3"
@@ -210,11 +222,14 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="0"
                     android:ems="10"
-                    android:inputType="datetime"
+                    android:inputType="numberDecimal"
+                    android:maxLength="2"
+                    android:digits="0123456789"
                     android:singleLine="false"
                     android:text="30"
                     android:textSize="30sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:selectAllOnFocus="true"/>
 
                 <TextView
                     android:id="@+id/txtView4"
@@ -232,11 +247,14 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="0"
                     android:ems="10"
-                    android:inputType="datetime"
+                    android:inputType="numberDecimal"
+                    android:maxLength="2"
+                    android:digits="0123456789"
                     android:singleLine="false"
                     android:text="00"
                     android:textSize="30sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:selectAllOnFocus="true"/>
 
             </LinearLayout>
             <Switch
@@ -268,11 +286,14 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="0"
                     android:ems="10"
-                    android:inputType="datetime"
+                    android:inputType="numberDecimal"
+                    android:maxLength="2"
+                    android:digits="0123456789"
                     android:singleLine="false"
                     android:text="00"
                     android:textSize="30sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:selectAllOnFocus="true"/>
 
                 <TextView
                     android:id="@+id/txtView9"
@@ -290,11 +311,14 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="0"
                     android:ems="10"
-                    android:inputType="datetime"
+                    android:inputType="numberDecimal"
+                    android:maxLength="2"
+                    android:digits="0123456789"
                     android:singleLine="false"
                     android:text="30"
                     android:textSize="30sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:selectAllOnFocus="true"/>
 
                 <TextView
                     android:id="@+id/txtView10"
@@ -312,11 +336,14 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="0"
                     android:ems="10"
-                    android:inputType="datetime"
+                    android:inputType="numberDecimal"
+                    android:maxLength="2"
+                    android:digits="0123456789"
                     android:singleLine="false"
                     android:text="00"
                     android:textSize="30sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:selectAllOnFocus="true"/>
 
             </LinearLayout>
 
@@ -350,11 +377,14 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="0"
                     android:ems="10"
-                    android:inputType="datetime"
+                    android:inputType="numberDecimal"
+                    android:maxLength="2"
+                    android:digits="0123456789"
                     android:singleLine="false"
                     android:text="00"
                     android:textSize="30sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:selectAllOnFocus="true"/>
 
                 <TextView
                     android:id="@+id/txtView5"
@@ -372,11 +402,14 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="0"
                     android:ems="10"
-                    android:inputType="datetime"
+                    android:inputType="numberDecimal"
+                    android:maxLength="2"
+                    android:digits="0123456789"
                     android:singleLine="false"
                     android:text="10"
                     android:textSize="30sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:selectAllOnFocus="true"/>
 
                 <TextView
                     android:id="@+id/txtView6"
@@ -394,11 +427,14 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="0"
                     android:ems="10"
-                    android:inputType="datetime"
+                    android:inputType="numberDecimal"
+                    android:maxLength="2"
+                    android:digits="0123456789"
                     android:singleLine="false"
                     android:text="00"
                     android:textSize="30sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:selectAllOnFocus="true"/>
 
             </LinearLayout>
 
@@ -432,11 +468,14 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="0"
                     android:ems="10"
-                    android:inputType="datetime"
+                    android:inputType="numberDecimal"
+                    android:maxLength="2"
+                    android:digits="0123456789"
                     android:singleLine="false"
                     android:text="00"
                     android:textSize="30sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:selectAllOnFocus="true"/>
 
                 <TextView
                     android:id="@+id/txtView7"
@@ -454,11 +493,14 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="0"
                     android:ems="10"
-                    android:inputType="datetime"
+                    android:inputType="numberDecimal"
+                    android:maxLength="2"
+                    android:digits="0123456789"
                     android:singleLine="false"
                     android:text="01"
                     android:textSize="30sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:selectAllOnFocus="true"/>
 
                 <TextView
                     android:id="@+id/txtView8"
@@ -476,11 +518,14 @@
                     android:layout_marginRight="5dp"
                     android:layout_weight="0"
                     android:ems="10"
-                    android:inputType="datetime"
+                    android:inputType="numberDecimal"
+                    android:maxLength="2"
+                    android:digits="0123456789"
                     android:singleLine="false"
                     android:text="00"
                     android:textSize="30sp"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:selectAllOnFocus="true"/>
 
             </LinearLayout>
 
@@ -515,7 +560,9 @@
                     android:layout_weight="0"
                     android:ems="10"
                     android:gravity="center"
-                    android:inputType="numberSigned"
+                    android:inputType="numberDecimal"
+                    android:maxLength="2"
+                    android:digits="0123456789"
                     android:text="1"
                     android:textSize="30sp"
                     android:textStyle="bold" />
