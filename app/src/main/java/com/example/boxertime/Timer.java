@@ -1,32 +1,50 @@
 package com.example.boxertime;
 
+import android.text.InputFilter;
+import android.widget.CompoundButton;
+import android.widget.EditText;
+import android.widget.Switch;
 import android.widget.TextView;
 
-public class Timer implements Runnable {
-    private TextView textView;
-    Timer(TextView textView){
-        this.textView=textView;
+public class Timer implements CompoundButton.OnCheckedChangeListener {
+    private EditText hour;
+    private EditText min;
+    private EditText sec;
+    private Switch swtch = null;
+    private boolean isEabled = true;
+
+    public Timer(EditText hour, EditText min, EditText sec) {
+        this.hour = hour;
+        this.min = min;
+        this.sec = sec;
+
+        hour.setFilters(new InputFilter[]{new InputCharFilter("0", "99")});
+        min.setFilters(new InputFilter[]{new InputCharFilter("0", "60")});
+        sec.setFilters(new InputFilter[]{new InputCharFilter("0", "60")});
     }
-    public int delay (int j) {
-        int i = j;
-        try {
-            Thread.sleep(100);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        i++;
-        return i;
+
+    public Timer(EditText hour, EditText min, EditText sec, Switch swtch) {
+        //Init variables
+        this.hour = hour;
+        this.min = min;
+        this.sec = sec;
+        this.swtch = swtch;
+        this.swtch.setOnCheckedChangeListener(this);
+        this.isEabled = swtch.isChecked();
+        // Set Enabled/disabled
+        onCheckedChanged(swtch, isEabled);
+        // Set min/max value in text field
+        hour.setFilters(new InputFilter[]{new InputCharFilter("0", "99")});
+        min.setFilters(new InputFilter[]{new InputCharFilter("0", "60")});
+        sec.setFilters(new InputFilter[]{new InputCharFilter("0", "60")});
+
 
     }
 
     @Override
-    public void run() {
-        int i=0;
-        while (true) {
-            String s = String.valueOf(delay(i));
-            textView.setText(s);
-            System.out.println(s);
-            i++;
-        }
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        hour.setEnabled(isChecked);
+        min.setEnabled(isChecked);
+        sec.setEnabled(isChecked);
     }
 }
